@@ -3,6 +3,10 @@ import sys
 import unittest
 from pathlib import Path
 
+# Для импорта из каталога выше уровнем необходим этот код.
+sys.path.append(str(Path(sys.argv[0]).parents[1]))
+from lucky_tickets import count_tickets
+
 
 class TestLuckyTickets(unittest.TestCase):
     """Тестирование функции определения счастливого билета."""
@@ -29,10 +33,4 @@ class TestLuckyTickets(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # Для импорта из каталога выше уровнем необходим этот костыль.
-    sys.path.append(str(Path(sys.argv[0]).parents[1]))
-
-    # Импорт из каталога выше уровнем. Здесь, что бы PEP не ругался.
-    from lucky_tickets import count_tickets
-
     unittest.main()
