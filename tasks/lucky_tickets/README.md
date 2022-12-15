@@ -43,7 +43,7 @@
 ###### _Пример использования кода:_
     
 ```
-from lucky_tickets import count_tickets
-
-assert count_tickets(6) == 55252
+>>> from lucky_tickets import count_tickets
+>>>
+>>> assert count_tickets(6) == 55252
 ```
