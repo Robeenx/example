@@ -1,10 +1,7 @@
 
 import sys
 import unittest
-from os.path import dirname, realpath
-
-sys.path.append(dirname(dirname(realpath(__file__))))
-from lucky_tickets import count_tickets
+from pathlib import Path
 
 
 class TestLuckyTickets(unittest.TestCase):
@@ -32,4 +29,10 @@ class TestLuckyTickets(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    # Для импорта из каталога выше уровнем необходим этот костыль.
+    sys.path.append(str(Path(sys.argv[0]).parents[1]))
+
+    # Импорт из каталога выше уровнем. Здесь, что бы PEP не ругался.
+    from lucky_tickets import count_tickets
+
     unittest.main()
