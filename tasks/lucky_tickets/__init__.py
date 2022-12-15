@@ -1,1 +1,0 @@
-from .lucky_tickets import *
