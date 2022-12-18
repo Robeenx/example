@@ -31,7 +31,5 @@ def count_tickets(num: int) -> int:
     return sum(i ** 2 for i in temp.values())
 
 
-if __name__ == '__main__':
-    assert count_tickets(2) == 10
-    assert count_tickets(4) == 670
-    assert count_tickets(6) == 55252
+if __name__ =='__main__':
+    print(count_tickets(6))

@@ -14,11 +14,5 @@ def find_median(arr: list[int]) -> int | float:
 
 
 if __name__ == '__main__':
-    data = (
-        ([1, 5, 2, 3, 6], 3),
-        ([100, 5, 2, 4, 3, 6], 4.5),
-    )
-    for arr, value in data:
-        res = find_median(arr)
-        assert res == value
-        assert isinstance(res, type(value))
+    print(find_median([1, 5, 2, 3, 6]))  # 3
+    print(find_median([100, 5, 2, 4, 3, 6]))  # 4.5
